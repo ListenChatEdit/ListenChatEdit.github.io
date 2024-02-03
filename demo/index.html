@@ -1,1 +1,241 @@
-TEST DEMO
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Audio Samples from Listen, Chat, and Edit</title>
+		<style>
+			div {
+			margin-bottom: 32px;
+			}
+			
+			.github.td {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+
+			
+			#toc_container {
+			background: #f9f9f9 none repeat scroll 0 0;
+			border: 1px solid #aaa;
+			display: table;
+			font-size: 95%;
+			padding-top: 20px;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-bottom: 8px;
+			width: auto;
+			}
+			
+			#toc_container ul  {
+			  list-style: outside none none !important; margin-left: -40px;
+			}
+			
+			.id {
+			width: 245px;
+			}
+			
+			.ood {
+			width: 280px;
+			}
+			
+			.first-col {
+			padding-right: 20px;
+			white-space: nowrap;
+			}
+				
+		  .text {
+			font-style: italic;
+			color: #666666;
+		  }
+			
+		</style>
+	</head>
+	
+	<body>
+		<article>
+			<header>
+				<h1> Audio Samples of <i>Listen, Chat, and Edit: Text-Guided Soundscape Modification for Enhanced Auditory Experience</i> </h1>
+			</header>
+		</article>
+		
+
+        <h2>Abstract</h2>
+            <div>
+                In daily life, we encounter a variety of sounds, both desirable and undesirable, with limited control over their presence and volume. 
+                Our work introduces “Listen, Chat, and Edit” (LCE), a novel multimodal sound mixture editor that modifies each sound source in a mixture based on user-provided text instructions. 
+                LCE distinguishes itself with a user-friendly chat interface and its unique ability to edit multiple sound sources simultaneously within a mixture, without needing to separate them. 
+                Users input open-vocabulary text prompts, which are interpreted by a large language model to create a semantic filter for editing the sound mixture. 
+                The system then decomposes the mixture into its components, applies the semantic filter, and reassembles it into the desired output. 
+                We developed a 160-hour dataset with over 100k mixtures, including speech and various audio sources, along with text prompts for diverse editing tasks like extraction, removal, and volume control. 
+                Our experiments demonstrate significant improvements in signal quality across all editing tasks and robust performance in zero-shot scenarios with varying numbers and types of sound sources.
+            </div>
+		
+		<div>
+			<p>This page contains a set of audio samples in support of the paper. </p>
+            <p> We provide five samples for sound mixtures consisting of 2 Speech + 2 Audio (VGGSound) and two samples for each one of the zero-shot cases. </p>
+            <p> For every sample, we write 4 or 6 text prompts. We show the edited and the target sound mixture according to each text prompt. </p>
+            <p> Spectrograms for all samples can be found in Figure 2 and Figure 6 to 13 in Appendix G, in the paper.</p>
+            <p> We recommend opening this website in Google Chrome and wearing headphones for the best audio experience.</p>
+		</div>
+		
+		
+		<h2>Contents</h2>
+			<div id="toc_container" style="padding-top:0px;">
+                In-distribution
+				    <li style="padding-left: 10px;"><a href="#2s2a"> 2 Speech + 2 Audio (VGGSound) </a></li>
+                Zero-shot
+                    <li style="padding-left: 10px;"><a href="#2s"> 2 Speech </a></li>
+                    <li style="padding-left: 10px;"><a href="#2a"> 2 Audio (VGGSound) </a></li>
+                    <li style="padding-left: 10px;"><a href="#2s1a"> 2 Speech + 1 Audio (VGGSound) </a></li>
+                    <li style="padding-left: 10px;"><a href="#1s2a"> 1 Speech + 2 Audio (VGGSound) </a></li>
+                    <li style="padding-left: 10px;"><a href="#2s2a_fsdseen"> 2 Speech + 2 Audio (FSD50K, seen class labels) </a></li>
+                    <li style="padding-left: 10px;"><a href="#2s2a_fsdunseen"> 2 Speech + 2 Audio (FSD50K, unseen class labels) </a></li>
+		</div>
+		
+		<div>
+			<a name="2s2a"><h2>2 Speech + 2 Audio (VGGSound)</h2></a>
+			<hr>
+			<p></p>
+			
+            <table>
+                <tbody>
+                    <tr>
+                    <th>Input Mixture</th>
+                    <td style="text-align: center;">female speaker with high pitch, normal tempo, high energy, and neutral emotion</td>
+                    <td style="text-align: center;">male speaker with low pitch, high tempo, normal energy, and neutral emotion</td>
+                    <td style="text-align: center;">helicopter</td>
+                    <td style="text-align: center;">turkey gobbling</td>
+                    </tr>
+                    <tr>
+                    <td><audio controls>
+                        <source src="../wavs/2Speech2Audio/ex1/mix.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio></td>
+                    <td><audio controls>
+                        <source src="../wavs/2Speech2Audio/ex1/s0.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio></td>
+                    <td><audio controls>
+                        <source src="../wavs/2Speech2Audio/ex1/s1.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio></td>
+                    <td><audio controls>
+                        <source src="../wavs/2Speech2Audio/ex1/s2.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio></td>
+                    <td><audio controls>
+                        <source src="../wavs/2Speech2Audio/ex1/s3.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio></td>
+                </tbody>
+            </table>
+			<p><b>Text prompt: </b><span class="text">"Increase the volume of the speeches and decrease the volume of the background sounds."</p>
+                <table>
+                    <tbody>
+                    <tr>
+                        <th>Edited Mixture</th>
+                        <th>Target Mixture</th>
+                    </tr>
+                    <tr>
+                        <td><audio controls>
+                            <source src="../wavs/2Speech2Audio/ex1/edit_UUDD.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio></td>
+                        <td><audio controls><source src="../wavs/2Speech2Audio/ex1/tar_UUDD.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio></td>
+                    </tbody>
+                </table>
+			<p><b>Text prompt: </b><span class="text">"Remove all people talking."</p>
+                <table>
+                    <tbody>
+                        <tr>
+                        <th>Edited Mixture</th>
+                        <th>Target Mixture</th>
+                        </tr>
+                        <tr>
+                        <td><audio controls>
+                            <source src="../wavs/2Speech2Audio/ex1/edit_0011.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio></td>
+                        <td><audio controls><source src="../wavs/2Speech2Audio/ex1/tar_0011.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio></td>
+                    </tbody>
+                </table>
+            <p><b>Text prompt: </b><span class="text">"Could you kindly eliminate the sound of the helicopter? I appreciate it."</p>
+                <table>
+                    <tbody>
+                        <tr>
+                        <th>Edited Mixture</th>
+                        <th>Target Mixture</th>
+                        </tr>
+                        <tr>
+                        <td><audio controls>
+                            <source src="../wavs/2Speech2Audio/ex1/edit_1101.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio></td>
+                        <td><audio controls><source src="../wavs/2Speech2Audio/ex1/tar_1101.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio></td>
+                    </tbody>
+                </table>
+            <p><b>Text prompt: </b><span class="text">"Let's pull out the sound of the fast-talking man and the turkey."</p>
+                <table>
+                    <tbody>
+                        <tr>
+                        <th>Edited Mixture</th>
+                        <th>Target Mixture</th>
+                        </tr>
+                        <tr>
+                        <td><audio controls>
+                            <source src="../wavs/2Speech2Audio/ex1/edit_0101.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio></td>
+                        <td><audio controls><source src="../wavs/2Speech2Audio/ex1/tar_0101.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio></td>
+                    </tbody>
+                </table>
+            <p><b>Text prompt: </b><span class="text">"Why not get rid of the man's voice and the turkey's noise, and reduce the helicopter's volume?"</p>
+                <table>
+                    <tbody>
+                        <tr>
+                        <th>Edited Mixture</th>
+                        <th>Target Mixture</th>
+                        </tr>
+                        <tr>
+                        <td><audio controls>
+                            <source src="../wavs/2Speech2Audio/ex1/edit_10D0.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio></td>
+                        <td><audio controls><source src="../wavs/2Speech2Audio/ex1/tar_10D0.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio></td>
+                    </tbody>
+            </table>
+            <p><b>Text prompt: </b><span class="text">"Please extract the person with an elevated tone."</p>
+                <table>
+                    <tbody>
+                        <tr>
+                        <th>Edited Mixture</th>
+                        <th>Target Mixture</th>
+                        </tr>
+                        <tr>
+                        <td><audio controls>
+                            <source src="../wavs/2Speech2Audio/ex1/edit_1000.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio></td>
+                        <td><audio controls><source src="../wavs/2Speech2Audio/ex1/tar_1000.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio></td>
+                    </tbody>
+                </table>
+
+            <hr>
+            TODO
+
+		</div>
+				
+	</body>
+	
+</html>
