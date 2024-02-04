@@ -71,14 +71,14 @@
 		
 		<div>
 			<p>This page contains a set of audio samples in support of the paper. </p>
-            <p> We provide five samples for sound mixtures consisting of 2 Speech + 2 Audio (VGGSound) and two samples for each one of the zero-shot cases. </p>
+            <p> We provide five samples for sound mixtures consisting of 2 Speech + 2 Audio (VGGSound) and two samples for each one of the zero-shot sound mixture compositions. </p>
             <p> For every sample, we write 4 or 6 text prompts. We show the edited and the target sound mixture according to each text prompt. </p>
             <p> Spectrograms for all samples can be found in Figure 2 and Figure 6 to 13 in Appendix G, in the paper.</p>
-            <p> We recommend opening this website in Google Chrome and wearing headphones for the best audio experience.</p>
+            <p> We recommend wearing headphones for the best audio experience.</p>
 		</div>
 		
 		
-		<h2>Contents</h2>
+		<h2>Sound Mixture Compositions</h2>
 			<div id="toc_container" style="padding-top:0px;">
                 In-distribution
 				    <li style="padding-left: 10px;"><a href="#2s2a"> 2 Speech + 2 Audio (VGGSound) </a></li>
@@ -87,155 +87,846 @@
                     <li style="padding-left: 10px;"><a href="#2a"> 2 Audio (VGGSound) </a></li>
                     <li style="padding-left: 10px;"><a href="#2s1a"> 2 Speech + 1 Audio (VGGSound) </a></li>
                     <li style="padding-left: 10px;"><a href="#1s2a"> 1 Speech + 2 Audio (VGGSound) </a></li>
-                    <li style="padding-left: 10px;"><a href="#2s2a_fsdseen"> 2 Speech + 2 Audio (FSD50K, seen class labels) </a></li>
-                    <li style="padding-left: 10px;"><a href="#2s2a_fsdunseen"> 2 Speech + 2 Audio (FSD50K, unseen class labels) </a></li>
+                    <li style="padding-left: 10px;"><a href="#2s2a_fsdseen"> 2 Speech + 2 Audio (FSD50K, seen audio labels) </a></li>
+                    <li style="padding-left: 10px;"><a href="#2s2a_fsdunseen"> 2 Speech + 2 Audio (FSD50K, unseen audio labels) </a></li>
 		</div>
 		
 		<div>
 			<a name="2s2a"><h2>2 Speech + 2 Audio (VGGSound)</h2></a>
 			<hr>
 			<p></p>
-			
-            <table>
-                <tbody>
-                    <tr>
-                    <th>Input Mixture</th>
-                    <td style="text-align: center;">female speaker with high pitch, normal tempo, high energy, and neutral emotion</td>
-                    <td style="text-align: center;">male speaker with low pitch, high tempo, normal energy, and neutral emotion</td>
-                    <td style="text-align: center;">helicopter</td>
-                    <td style="text-align: center;">turkey gobbling</td>
-                    </tr>
-                    <tr>
-                    <td><audio controls>
+		</div>
+
+        <!------------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------------>
+        <!--Figure 2-->
+        <!------------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------------>
+        
+        <table>
+            <tbody>
+                <tr>
+                <th>Input Mixture</th>
+                <td style="text-align: center;">female speaker with high pitch, normal tempo, high energy, and neutral emotion</td>
+                <td style="text-align: center;">male speaker with low pitch, high tempo, normal energy, and neutral emotion</td>
+                <td style="text-align: center;">helicopter</td>
+                <td style="text-align: center;">turkey gobbling</td>
+                </tr>
+                <tr>
+                <td style="width: 20%;">
+                    <audio controls>
                         <source src="../wavs/2Speech2Audio/ex1/mix.wav" type="audio/wav">
                         Your browser does not support the audio element.
-                    </audio></td>
-                    <td><audio controls>
+                    </audio>
+                </td>
+                <td style="width: 20%;">
+                    <audio controls>
                         <source src="../wavs/2Speech2Audio/ex1/s0.wav" type="audio/wav">
                         Your browser does not support the audio element.
-                    </audio></td>
-                    <td><audio controls>
+                    </audio>
+                </td>
+                <td style="width: 20%;">
+                    <audio controls>
                         <source src="../wavs/2Speech2Audio/ex1/s1.wav" type="audio/wav">
                         Your browser does not support the audio element.
-                    </audio></td>
-                    <td><audio controls>
+                    </audio>
+                </td>
+                <td style="width: 20%;">
+                    <audio controls>
                         <source src="../wavs/2Speech2Audio/ex1/s2.wav" type="audio/wav">
                         Your browser does not support the audio element.
-                    </audio></td>
-                    <td><audio controls>
+                    </audio>
+                </td>
+                <td style="width: 20%;">
+                    <audio controls>
                         <source src="../wavs/2Speech2Audio/ex1/s3.wav" type="audio/wav">
                         Your browser does not support the audio element.
-                    </audio></td>
-                </tbody>
-            </table>
-			<p><b>Text prompt: </b><span class="text">"Increase the volume of the speeches and decrease the volume of the background sounds."</p>
-                <table>
-                    <tbody>
-                    <tr>
-                        <th>Edited Mixture</th>
-                        <th>Target Mixture</th>
-                    </tr>
-                    <tr>
-                        <td><audio controls>
-                            <source src="../wavs/2Speech2Audio/ex1/edit_UUDD.wav" type="audio/wav">
-                            Your browser does not support the audio element.
-                        </audio></td>
-                        <td><audio controls><source src="../wavs/2Speech2Audio/ex1/tar_UUDD.wav" type="audio/wav">
-                            Your browser does not support the audio element.
-                        </audio></td>
-                    </tbody>
-                </table>
-			<p><b>Text prompt: </b><span class="text">"Remove all people talking."</p>
-                <table>
-                    <tbody>
-                        <tr>
-                        <th>Edited Mixture</th>
-                        <th>Target Mixture</th>
-                        </tr>
-                        <tr>
-                        <td><audio controls>
-                            <source src="../wavs/2Speech2Audio/ex1/edit_0011.wav" type="audio/wav">
-                            Your browser does not support the audio element.
-                        </audio></td>
-                        <td><audio controls><source src="../wavs/2Speech2Audio/ex1/tar_0011.wav" type="audio/wav">
-                            Your browser does not support the audio element.
-                        </audio></td>
-                    </tbody>
-                </table>
-            <p><b>Text prompt: </b><span class="text">"Could you kindly eliminate the sound of the helicopter? I appreciate it."</p>
-                <table>
-                    <tbody>
-                        <tr>
-                        <th>Edited Mixture</th>
-                        <th>Target Mixture</th>
-                        </tr>
-                        <tr>
-                        <td><audio controls>
-                            <source src="../wavs/2Speech2Audio/ex1/edit_1101.wav" type="audio/wav">
-                            Your browser does not support the audio element.
-                        </audio></td>
-                        <td><audio controls><source src="../wavs/2Speech2Audio/ex1/tar_1101.wav" type="audio/wav">
-                            Your browser does not support the audio element.
-                        </audio></td>
-                    </tbody>
-                </table>
-            <p><b>Text prompt: </b><span class="text">"Let's pull out the sound of the fast-talking man and the turkey."</p>
-                <table>
-                    <tbody>
-                        <tr>
-                        <th>Edited Mixture</th>
-                        <th>Target Mixture</th>
-                        </tr>
-                        <tr>
-                        <td><audio controls>
-                            <source src="../wavs/2Speech2Audio/ex1/edit_0101.wav" type="audio/wav">
-                            Your browser does not support the audio element.
-                        </audio></td>
-                        <td><audio controls><source src="../wavs/2Speech2Audio/ex1/tar_0101.wav" type="audio/wav">
-                            Your browser does not support the audio element.
-                        </audio></td>
-                    </tbody>
-                </table>
-            <p><b>Text prompt: </b><span class="text">"Why not get rid of the man's voice and the turkey's noise, and reduce the helicopter's volume?"</p>
-                <table>
-                    <tbody>
-                        <tr>
-                        <th>Edited Mixture</th>
-                        <th>Target Mixture</th>
-                        </tr>
-                        <tr>
-                        <td><audio controls>
-                            <source src="../wavs/2Speech2Audio/ex1/edit_10D0.wav" type="audio/wav">
-                            Your browser does not support the audio element.
-                        </audio></td>
-                        <td><audio controls><source src="../wavs/2Speech2Audio/ex1/tar_10D0.wav" type="audio/wav">
-                            Your browser does not support the audio element.
-                        </audio></td>
-                    </tbody>
-            </table>
-            <p><b>Text prompt: </b><span class="text">"Please extract the person with an elevated tone."</p>
-                <table>
-                    <tbody>
-                        <tr>
-                        <th>Edited Mixture</th>
-                        <th>Target Mixture</th>
-                        </tr>
-                        <tr>
-                        <td><audio controls>
-                            <source src="../wavs/2Speech2Audio/ex1/edit_1000.wav" type="audio/wav">
-                            Your browser does not support the audio element.
-                        </audio></td>
-                        <td><audio controls><source src="../wavs/2Speech2Audio/ex1/tar_1000.wav" type="audio/wav">
-                            Your browser does not support the audio element.
-                        </audio></td>
-                    </tbody>
-                </table>
+                    </audio>
+                </td>
+            </tbody>
+        </table>
 
-            <hr>
-            TODO
+        <table>
+            <tr>
+                <td colspan="2" style="text-align: left; width: 50%;"><p><b>Text prompt A: </b><span class="text">"Increase the volume of the speeches and decrease the volume of the background sounds."</p></td>
+                <td colspan="2" style="text-align: left; width: 50%;"><p><b>Text prompt B: </b><span class="text">"Let's pull out the sound of the fast-talking man and the turkey."</p></td>
+            </tr>
+            <tr>
+                <th style="width: 25%; text-align: left;">Edited Mixture A</th>
+                <th style="width: 25%; text-align: left;">Target Mixture A</th>
+                <th style="width: 25%; text-align: left;">Edited Mixture B</th>
+                <th style="width: 25%; text-align: left;">Target Mixture B</th>
+            </tr>
+            <tr>
+                <td style="width: 25%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex1/edit_UUDD.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls><source src="../wavs/2Speech2Audio/ex1/tar_UUDD.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex1/edit_0101.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls><source src="../wavs/2Speech2Audio/ex1/tar_0101.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
 
+            <tr>
+                <td colspan="2" style="text-align: left; width: 50%;"><p><b>Text prompt C: </b><span class="text">"Remove all people talking."</p></td>
+                <td colspan="2" style="text-align: left; width: 50%;"><p><b>Text prompt D: </b><span class="text">"Why not get rid of the man's voice and the turkey's noise, and reduce the helicopter's volume?"</p></td>
+            </tr>
+            <tr>
+                <th style="width: 25%; text-align: left;">Edited Mixture C</th>
+                <th style="width: 25%; text-align: left;">Target Mixture C</th>
+                <th style="width: 25%; text-align: left;">Edited Mixture D</th>
+                <th style="width: 25%; text-align: left;">Target Mixture D</th>
+            </tr>
+            <tr>
+                <td style="width: 25%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex1/edit_0011.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls><source src="../wavs/2Speech2Audio/ex1/tar_0011.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex1/edit_10D0.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls><source src="../wavs/2Speech2Audio/ex1/tar_10D0.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="text-align: left; width: 50%;"><p><b>Text prompt E: </b><span class="text">"Could you kindly eliminate the sound of the helicopter? I appreciate it."</p></td>
+                <td colspan="2" style="text-align: left; width: 50%;"><p><b>Text prompt F: </b><span class="text">"Please extract the person with an elevated tone."</p></td>
+            </tr>
+            <tr>
+                <th style="width: 25%; text-align: left;">Edited Mixture E</th>
+                <th style="width: 25%; text-align: left;">Target Mixture E</th>
+                <th style="width: 25%; text-align: left;">Edited Mixture F</th>
+                <th style="width: 25%; text-align: left;">Target Mixture F</th>
+            </tr>
+            <tr>
+                <td style="width: 25%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex1/edit_1101.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls><source src="../wavs/2Speech2Audio/ex1/tar_1101.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex1/edit_1000.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls><source src="../wavs/2Speech2Audio/ex1/tar_1000.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+        </table>
+        <hr>
+
+        <!------------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------------>
+        <!--Example A-->
+        <!------------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------------>
+        
+        <table>
+            <tbody>
+                <tr>
+                <th>Input Mixture</th>
+                <td style="text-align: center;">male speaker with low pitch, low tempo, low energy, and sad emotion</td>
+                <td style="text-align: center;">female speaker with high pitch, normal tempo, normal energy, and neutral emotion</td>
+                <td style="text-align: center;">playing accordion</td>
+                <td style="text-align: center;">playing drum kit</td>
+                </tr>
+                <tr>
+                <td style="width: 20%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex2/mix.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 20%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex2/s0.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 20%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex2/s1.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 20%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex2/s2.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 20%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex2/s3.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tbody>
+        </table>
+
+        <table>
+            <tr>
+                <td colspan="2" style="text-align: left; width: 50%;"><p><b>Text prompt A: </b><span class="text">"Is it possible to single out the accordion's performance?"</p></td>
+                <td colspan="2" style="text-align: left; width: 50%;"><p><b>Text prompt B: </b><span class="text">"Lower the volume of the live accordion music that is currently being played, please."
+                </p></td>
+            </tr>
+            <tr>
+                <th style="width: 25%; text-align: left;">Edited Mixture A</th>
+                <th style="width: 25%; text-align: left;">Target Mixture A</th>
+                <th style="width: 25%; text-align: left;">Edited Mixture B</th>
+                <th style="width: 25%; text-align: left;">Target Mixture B</th>
+            </tr>
+            <tr>
+                <td style="width: 25%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex2/edit_0010.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls><source src="../wavs/2Speech2Audio/ex2/tar_0010.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex2/edit_11D1.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls><source src="../wavs/2Speech2Audio/ex2/tar_11D1.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="text-align: left; width: 50%;"><p><b>Text prompt C: </b><span class="text">"Could you raise the decibel level of the gloomy speaker that has a subdued tone?"</p></td>
+                <td colspan="2" style="text-align: left; width: 50%;"><p><b>Text prompt D: </b><span class="text">"Please raise the sound for the
+                    female speaker with a standard tempo, amplify the playing accordion, reduce the playing drum kit, and decrease the volume for the male speaker with a sluggish pace."</p></td>
+            </tr>
+            <tr>
+                <th style="width: 25%; text-align: left;">Edited Mixture C</th>
+                <th style="width: 25%; text-align: left;">Target Mixture C</th>
+                <th style="width: 25%; text-align: left;">Edited Mixture D</th>
+                <th style="width: 25%; text-align: left;">Target Mixture D</th>
+            </tr>
+            <tr>
+                <td style="width: 25%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex2/edit_U111.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls><source src="../wavs/2Speech2Audio/ex2/tar_U111.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex2/edit_DUUD.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls><source src="../wavs/2Speech2Audio/ex2/tar_DUUD.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="text-align: left; width: 50%;"><p><b>Text prompt E: </b><span class="text">"I'd like you to exclude the speaker with a high-frequency voice and average vitality, conveying a neutral tone."</p></td>
+                <td colspan="2" style="text-align: left; width: 50%;"><p><b>Text prompt F: </b><span class="text">"Make everything quieter."</p></td>
+            </tr>
+            <tr>
+                <th style="width: 25%; text-align: left;">Edited Mixture E</th>
+                <th style="width: 25%; text-align: left;">Target Mixture E</th>
+                <th style="width: 25%; text-align: left;">Edited Mixture F</th>
+                <th style="width: 25%; text-align: left;">Target Mixture F</th>
+            </tr>
+            <tr>
+                <td style="width: 25%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex2/edit_1011.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls><source src="../wavs/2Speech2Audio/ex2/tar_1011.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex2/edit_DDDD.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls><source src="../wavs/2Speech2Audio/ex2/tar_DDDD.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+        </table>
+        <hr>
+
+        <!------------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------------>
+        <!--Example B-->
+        <!------------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------------>
+        
+        <table>
+            <tbody>
+                <tr>
+                <th>Input Mixture</th>
+                <td style="text-align: center;">male speaker with low pitch, normal tempo, normal energy, and neutral emotion</td>
+                <td style="text-align: center;">male speaker with low pitch, high tempo, normal energy, and neutral emotion</td>
+                <td style="text-align: center;">underwater bubbling</td>
+                <td style="text-align: center;">train horning</td>
+                </tr>
+                <tr>
+                <td style="width: 20%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex3/mix.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 20%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex3/s0.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 20%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex3/s1.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 20%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex3/s2.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 20%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex3/s3.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tbody>
+        </table>
+
+        <table>
+            <tr>
+                <td colspan="2" style="text-align: left; width: 50%;"><p><b>Text prompt A: </b><span class="text">"Enhance this recording by removing all the noises."</p></td>
+                <td colspan="2" style="text-align: left; width: 50%;"><p><b>Text prompt B: </b><span class="text">"Could you raise the audio level of the underwater bubbling sound exclusively?"
+                </p></td>
+            </tr>
+            <tr>
+                <th style="width: 25%; text-align: left;">Edited Mixture A</th>
+                <th style="width: 25%; text-align: left;">Target Mixture A</th>
+                <th style="width: 25%; text-align: left;">Edited Mixture B</th>
+                <th style="width: 25%; text-align: left;">Target Mixture B</th>
+            </tr>
+            <tr>
+                <td style="width: 25%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex3/edit_1100.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls><source src="../wavs/2Speech2Audio/ex3/tar_1100.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex3/edit_11U1.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls><source src="../wavs/2Speech2Audio/ex3/tar_11U1.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="text-align: left; width: 50%;"><p><b>Text prompt C: </b><span class="text">"Can you adjust the sound so
+                    that both speakers are louder, the train horn is quieter, and the underwater bubbling is completely removed from the recording?"</p></td>
+                <td colspan="2" style="text-align: left; width: 50%;"><p><b>Text prompt D: </b><span class="text">"Is it possible to turn down the speakers' volume and crank up the background ambiance?"</p></td>
+            </tr>
+            <tr>
+                <th style="width: 25%; text-align: left;">Edited Mixture C</th>
+                <th style="width: 25%; text-align: left;">Target Mixture C</th>
+                <th style="width: 25%; text-align: left;">Edited Mixture D</th>
+                <th style="width: 25%; text-align: left;">Target Mixture D</th>
+            </tr>
+            <tr>
+                <td style="width: 25%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex3/edit_UU0D.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls><source src="../wavs/2Speech2Audio/ex3/tar_UU0D.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex3/edit_DDUU.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls><source src="../wavs/2Speech2Audio/ex3/tar_DDUU.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="text-align: left; width: 50%;"><p><b>Text prompt E: </b><span class="text">"I'd like you to edit out the speaker characterized by a faster tempo and the train horn sound altogether."</p></td>
+                <td colspan="2" style="text-align: left; width: 50%;"><p><b>Text prompt F: </b><span class="text">"Can you remove the speaker with a rapid rhythm?"</p></td>
+            </tr>
+            <tr>
+                <th style="width: 25%; text-align: left;">Edited Mixture E</th>
+                <th style="width: 25%; text-align: left;">Target Mixture E</th>
+                <th style="width: 25%; text-align: left;">Edited Mixture F</th>
+                <th style="width: 25%; text-align: left;">Target Mixture F</th>
+            </tr>
+            <tr>
+                <td style="width: 25%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex3/edit_1010.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls><source src="../wavs/2Speech2Audio/ex3/tar_1010.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex3/edit_1011.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls><source src="../wavs/2Speech2Audio/ex3/tar_1011.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+        </table>
+        <hr>
+
+        <!------------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------------>
+        <!--Example C-->
+        <!------------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------------>
+        
+        <table>
+            <tbody>
+                <tr>
+                <th>Input Mixture</th>
+                <td style="text-align: center;">female speaker with normal pitch, normal tempo, normal energy, and neutral emotion</td>
+                <td style="text-align: center;">male speaker with low pitch, normal tempo, high energy, and neutral emotion</td>
+                <td style="text-align: center;">playing hammond organ</td>
+                <td style="text-align: center;">rain</td>
+                </tr>
+                <tr>
+                <td style="width: 20%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex4/mix.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 20%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex4/s0.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 20%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex4/s1.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 20%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex4/s2.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 20%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex4/s3.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tbody>
+        </table>
+
+        <table>
+            <tr>
+                <td colspan="2" style="text-align: left; width: 50%;"><p><b>Text prompt A: </b><span class="text">"Can you edit the recording to extract the sound of the organ and rainfall?"</p></td>
+                <td colspan="2" style="text-align: left; width: 50%;"><p><b>Text prompt B: </b><span class="text">"Can you modify the sound so that the rain and Hammond organ
+                    are quieter, the female speaker with normal pitch and energy is louder, and the male speaker with low pitch and high energy is entirely eliminated from the recording?"                    
+                </p></td>
+            </tr>
+            <tr>
+                <th style="width: 25%; text-align: left;">Edited Mixture A</th>
+                <th style="width: 25%; text-align: left;">Target Mixture A</th>
+                <th style="width: 25%; text-align: left;">Edited Mixture B</th>
+                <th style="width: 25%; text-align: left;">Target Mixture B</th>
+            </tr>
+            <tr>
+                <td style="width: 25%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex4/edit_0011.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls><source src="../wavs/2Speech2Audio/ex4/tar_0011.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex4/edit_U0DD.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls><source src="../wavs/2Speech2Audio/ex4/tar_U0DD.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="text-align: left; width: 50%;"><p><b>Text prompt C: </b><span class="text">"I'd like you to turn down the volume for the lady with the average pitch."</p></td>
+                <td colspan="2" style="text-align: left; width: 50%;"><p><b>Text prompt D: </b><span class="text">"Please remove the the organ music and both the female and male speakers
+                    in the audio track."</p></td>
+            </tr>
+            <tr>
+                <th style="width: 25%; text-align: left;">Edited Mixture C</th>
+                <th style="width: 25%; text-align: left;">Target Mixture C</th>
+                <th style="width: 25%; text-align: left;">Edited Mixture D</th>
+                <th style="width: 25%; text-align: left;">Target Mixture D</th>
+            </tr>
+            <tr>
+                <td style="width: 25%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex4/edit_D111.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls><source src="../wavs/2Speech2Audio/ex4/tar_D111.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex4/edit_0001.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls><source src="../wavs/2Speech2Audio/ex4/tar_0001.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="text-align: left; width: 50%;"><p><b>Text prompt E: </b><span class="text">"Please make the organ music louder."</p></td>
+                <td colspan="2" style="text-align: left; width: 50%;"><p><b>Text prompt F: </b><span class="text">"Let's extract the part featuring the speaker characterized by typical tone?"</p></td>
+            </tr>
+            <tr>
+                <th style="width: 25%; text-align: left;">Edited Mixture E</th>
+                <th style="width: 25%; text-align: left;">Target Mixture E</th>
+                <th style="width: 25%; text-align: left;">Edited Mixture F</th>
+                <th style="width: 25%; text-align: left;">Target Mixture F</th>
+            </tr>
+            <tr>
+                <td style="width: 25%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex4/edit_11U1.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls><source src="../wavs/2Speech2Audio/ex4/tar_11U1.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex4/edit_1000.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls><source src="../wavs/2Speech2Audio/ex4/tar_1000.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+        </table>
+        <hr>
+
+        <!------------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------------>
+        <!--Example D-->
+        <!------------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------------>
+        
+        <table>
+            <tbody>
+                <tr>
+                <th>Input Mixture</th>
+                <td style="text-align: center;">female speaker with normal pitch, normal tempo, low energy, and neutral emotion</td>
+                <td style="text-align: center;">female speaker with normal pitch, low tempo, normal energy, and neutral emotion</td>
+                <td style="text-align: center;">church bell ringing</td>
+                <td style="text-align: center;">playing theremin</td>
+                </tr>
+                <tr>
+                <td style="width: 20%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex5/mix.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 20%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex5/s0.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 20%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex5/s1.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 20%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex5/s2.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 20%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex5/s3.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tbody>
+        </table>
+
+        <table>
+            <tr>
+                <td colspan="2" style="text-align: left; width: 50%;"><p><b>Text prompt A: </b><span class="text">"Extract the bell ringing from the rest of the audio."</p></td>
+                <td colspan="2" style="text-align: left; width: 50%;"><p><b>Text prompt B: </b><span class="text">
+                    "Could you amplify the audio level of the speaker with normal energy and slow tempo, and also raise the church bell ringing sound, but lower the volume of the speaker with low vitality?"                    
+                </p></td>
+            </tr>
+            <tr>
+                <th style="width: 25%; text-align: left;">Edited Mixture A</th>
+                <th style="width: 25%; text-align: left;">Target Mixture A</th>
+                <th style="width: 25%; text-align: left;">Edited Mixture B</th>
+                <th style="width: 25%; text-align: left;">Target Mixture B</th>
+            </tr>
+            <tr>
+                <td style="width: 25%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex5/edit_0010.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls><source src="../wavs/2Speech2Audio/ex5/tar_0010.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex5/edit_DUU1.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls><source src="../wavs/2Speech2Audio/ex5/tar_DUU1.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="text-align: left; width: 50%;"><p><b>Text prompt C: </b><span class="text">"Let's extract all human voices from the recording."</p></td>
+                <td colspan="2" style="text-align: left; width: 50%;"><p><b>Text prompt D: </b><span class="text">"Reduce the background audio and turn up the volume on the talking parts."</p></td>
+            </tr>
+            <tr>
+                <th style="width: 25%; text-align: left;">Edited Mixture C</th>
+                <th style="width: 25%; text-align: left;">Target Mixture C</th>
+                <th style="width: 25%; text-align: left;">Edited Mixture D</th>
+                <th style="width: 25%; text-align: left;">Target Mixture D</th>
+            </tr>
+            <tr>
+                <td style="width: 25%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex5/edit_1100.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls><source src="../wavs/2Speech2Audio/ex5/tar_1100.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex5/edit_UUDD.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls><source src="../wavs/2Speech2Audio/ex5/tar_UUDD.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="text-align: left; width: 50%;"><p><b>Text prompt E: </b><span class="text">"Is it feasible to erase the theremin's playing sound?"</p></td>
+                <td colspan="2" style="text-align: left; width: 50%;"><p><b>Text prompt F: </b><span class="text">"I'd like you to amplify the playing theremin sound and reduce the church bell ringing sound."</p></td>
+            </tr>
+            <tr>
+                <th style="width: 25%; text-align: left;">Edited Mixture E</th>
+                <th style="width: 25%; text-align: left;">Target Mixture E</th>
+                <th style="width: 25%; text-align: left;">Edited Mixture F</th>
+                <th style="width: 25%; text-align: left;">Target Mixture F</th>
+            </tr>
+            <tr>
+                <td style="width: 25%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex5/edit_1110.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls><source src="../wavs/2Speech2Audio/ex5/tar_1110.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls>
+                        <source src="../wavs/2Speech2Audio/ex5/edit_11DU.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td style="width: 25%;">
+                    <audio controls><source src="../wavs/2Speech2Audio/ex5/tar_11DU.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+        </table>
+        <hr>
+
+		<div>
+			<a name="2s"><h2>2 Speech</h2></a>
+			<hr>
+			<p></p>
 		</div>
-				
+
+		<div>
+			<a name="2a"><h2>2 Audio (VGGSound)</h2></a>
+			<hr>
+			<p></p>
+		</div>
+
+        <div>
+			<a name="2s1a"><h2>2 Speech + 1 Audio (VGGSound)</h2></a>
+			<hr>
+			<p></p>
+		</div>
+
+        <div>
+			<a name="1s2a"><h2>1 Speech + 2 Audio (VGGSound)</h2></a>
+			<hr>
+			<p></p>
+		</div>
+
+		<div>
+			<a name="2s2a_fsdseen"><h2>2 Speech + 2 Audio (FSD50K, seen audio labels)</h2></a>
+			<hr>
+			<p></p>
+		</div>
+
+		<div>
+			<a name="2s2a_fsdunseen"><h2>2 Speech + 2 Audio (FSD50K, unseen audio labels)</h2></a>
+			<hr>
+			<p></p>
+		</div>
+
 	</body>
 	
 </html>
